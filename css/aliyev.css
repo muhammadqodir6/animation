@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(171, 171, 171);
+}
+.card{
+    width: 600px;
+    height: 450px;
+    border: 6px solid green;
+    margin: 0 auto;
+    margin-top: 8%;
+    border-radius: 18px;
+    box-shadow: -10px -10px 20px white,
+    0px 0px 20px black;
+    position: relative;
+}
+.sun{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: #fff;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    box-shadow: 0 0 20px rgb(246, 246, 85),
+    0 0 20px rgb(246, 246, 85),
+    0 0 20px rgb(246, 246, 85),
+    0 0 20px rgb(207, 207, 66);
+}
+.way{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10vh;
+    background-color: grey;
+    border-radius: 00 0 13px 13px;
+}
+.way::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: repeating-linear-gradient(90deg, transparent 0, transparent 50%, #fff, 50%, #fff 100%);
+    background-size: 20px;
+    left: 0;
+    top: 50%;
+    animation: palasa 0.2s linear infinite;
+}
+@keyframes palasa {
+    0%{
+        background-position-x: 20px;
+    }
+    100%{
+        background-position-x: 0px;
+    }
+}
+.way::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 2vh;
+    background-color: green;
+    top: -10px;
+}
+.fa-van-shuttle{
+    font-size: 3rem;
+    color: #fff;
+    position: absolute;
+    left: 10px;
+    top: -2px;
+    -webkit-text-stroke: 2px black;
+    animation: car 0.2s ease infinite;
+}
+@keyframes car{
+    0%,100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(2px);
+    }
+}
+.tree{
+    margin-top: 54.3%;
+    font-size: 2.7rem;
+    color: rgb(3, 176, 3);
+    display: flex;
+    justify-content: space-between;
+    animation: tree 5s linear infinite;
+}
+@keyframes tree{
+    0%,100%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(2px);
+    }
+} 
+.bulut{
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    animation: bulut 5s linear infinite;
+}
+.b1{
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 3rem;
+    color: rgb(69, 66, 66);
+}
+.b2{
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 3rem;
+    color: rgb(69, 66, 66);
+}
+.b3{
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 3rem;
+    color: rgb(69, 66, 66);
+}
+.b4{
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 3rem;
+    color: rgb(69, 66, 66);
+}
+@keyframes bulut{
+    0%,100%{
+        transform: translateX(20px);
+    }
+    50%{
+        transform: translateX(0px);
+    }
+}
+
+@media only screen and (max-width:768px){
+    .card{
+        width: 100%;
+    }
+    .tree{
+        margin-top: 45.2%;
+    }
+}
